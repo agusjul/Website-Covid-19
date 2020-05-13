@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19</title>
+    <link rel="stylesheet" href="./src/stylesheet.css">
+    <link rel="stylesheet" href="./src/responsive.css">
+    <link rel="icon" href="./src/logo/browser-logo white-01.png" type="image/x-icon">
+   
+
+</head>
+<body>
+    <header>
+        <div class="top">
+            <!-- Disini tempat navbar -->
+            <nav id="navbar">
+                <div class="header-logo">
+                    <img src="./src/logo/corona logo white-01 crop.png" alt="">
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li onclick="berandascroll()"> <a href="#">Beranda</a></li>
+                        <li onclick="statistikascroll()"> <a>Statistik</a></li>
+                        <div class="dropdown">
+                            <li> <a >Informasi</a></li>
+                            <div class="dropdown-isi">
+                                <li onclick="covidscroll()"> <a>Covid-19</a></li>
+                                <li> <a href="./pencegahan.html">Pencegahan</a></li>
+                                <li onclick="dokterscroll()"> <a>Dokter</a> </li>
+                                <li onclick="ciriciriscroll()"> <a>Ciri-ciri</a> </li>
+                                <li> <a href="./blog.html">Blog</a>  </li>
+                            </div>
+                        </div>                
+                        <li onclick="tentangscroll()"> <a>Tentang</a> </li>
+                    </ul>
+                </div>
+                <div class="burgermenu" onclick="dropdown_burger()">
+                    <img src="./src/icon/bars (1).svg" alt="">
+                </div>
+                <ul class="dropdown-burger" id="burger-dropdown">
+                    <li><a href="#">Beranda</a></li>
+                    <li onclick="statistikascroll()"><a>Statistik</a></li>
+                    <li onclick="covidscroll()"><a>Covid-19</a></li>
+                    <li"><a href="./pencegahan.html">Pencegahan</a></li>
+                    <li onclick="dokterscroll()"><a>Dokter</a></li>
+                    <li onclick="ciriciriscroll()"><a>Ciri-ciri</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li onclick="tentangscroll()"> <a>Tentang</a> </li>
+                </ul>
+                
+            </nav>
+        </div>
+        <div class="header-text" id="halamanberanda">
+            <h4 >Covid-19 (CoronaVirus)</h4>
+            <h1>Apa itu Covid-19?</h1>
+            <p class="ket-header">Selalu ingat untuk menjaga kesehatan, selalu menggunakan masker 
+                dan tidak keluar rumah jika tidak memiliki urusan yang penting </p>
+            <div class="btn-container">
+                <div class="head-button" onclick="window.open('https://covid19.go.id/','_blank')">
+                    <span><img src="./src/icon/weapons.svg" alt=""></span>
+                    <p>Pelajari Lebih Lanjut</p>
+                </div>
+                <div class="head-button" onclick="tampilVideo()">
+                    <span><img src="./src/icon/multimedia.svg" alt=""></span>
+                    <p>Tonton Video</p>
+                </div>
+            </div>       
+        </div>
+
+         <!-- Pop up video -->
+        <div class="modal" id="thisModal">
+            <div class="modal-konten">
+               <div class="tempat">
+                <iframe  src="https://www.youtube.com/embed/eZGMEXWzXEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <span class="close" onclick="closeVideo()">&times;</span>
+           </div>
+       </div>
+    </header>
+    <main>
+        <div id="content">
+            <div class="statistik-covid" id="halamanstatistik">
+                <div class="title-sta" id="halaman2">
+                    <p id="color2">STATISTIK</p>
+                    <h1 id="color1">Statistik Covid-19</h1>
+                </div>
+                <div>
+                    <div class="jenis-container">
+                        <div class="status-container">
+                            <div class="logo-status">                        
+                                <img src="./src/icon/plus.svg" alt="">
+                            </div>
+                            <div class="ket-status">
+                                <h1 id="yellow">2000</h1>
+                                <p id="color2">Terkorfirmasi</p>
+                            </div>
+                        </div>
+                        <div class="status-container">
+                            <div class="logo-status">                        
+                                <img src="./src/icon/like-1.svg" alt="">
+                            </div>
+                            <div class="ket-status">
+                                <h1 id="green">200</h1>
+                                <p id="color2">Sembuh</p>
+                            </div>
+                        </div>
+                        <div class="status-container">
+                            <div class="logo-status">                        
+                                <img src="./src/icon/error.svg" alt="">
+                            </div>
+                            <div class="ket-status">
+                                <h1 id="red">20</h1>
+                                <p id="color2">Meninggal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="peta-covid">
+                        <img src="./src/img/id.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disini Tempat Article -->
+
+            <article id="halamancovid">
+                <div class="judulini">
+                    <p id="color2">Covid-19</p>
+                    <h1 id="color1">Artikel Mengenai Covid-19</h1>
+                </div>
+                <div class="konten-berita-terkini">
+                    <div class="berita-terkini">
+                        <div class="informasi">
+                            <img src="./src/img/covid19.jpg" alt="">
+                        </div>
+                        <div class="informasikanan">
+                            <h1 id="color1">Apa itu Covid19 ?</h1>
+                            <h4 id="color2">Covid19 Virus yang menyerang pernafasan</h4>
+                            <p>Coronavirus adalah suatu kelompok virus yang dapat menyebabkan penyakit pada hewan atau manusia. Beberapa jenis coronavirus diketahui menyebabkan infeksi saluran nafas pada manusia mulai dari batuk pilek hingga yang lebih serius seperti Middle East Respiratory Syndrome (MERS) dan Severe Acute Respiratory Syndrome (SARS). Coronavirus jenis baru yang ditemukan menyebabkan penyakit COVID-19.</p>
+                            <p>COVID-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan. Ini merupakan virus baru dan penyakit yang sebelumnya tidak dikenal sebelum terjadi wabah di Wuhan, Tiongkok, bulan Desember 2019.</p>
+                            <a href="https://www.who.int/indonesia/news/novel-coronavirus/qa-for-public" target="_blank">
+                                <div class="informasi-tombol">
+                                    Baca selanjutnya >
+                                </div>
+                             </a>
+                        </div>
+                    </div>
+                    <div class="berita-terkini">
+                        <div class="informasi">
+                            <img src="./src/img/rapid-test1.jpg" alt="">                        
+                        </div>
+                        <div class="informasikanan">
+                            <h1 id="color1">Rapid Test Masiv</h1>
+                            <h4 id="color2">Efektivitas Rapid Test Untuk Deteksi Dini</h4>
+                            <p>Rapid test adalah metode skrining awal untuk mendeteksi antibodi, yaitu IgM dan IgG, yang diproduksi oleh tubuh untuk melawan virus Corona. Antibodi ini akan dibentuk oleh tubuh bila ada paparan virus Corona</p>
+                            <p>Dengan kata lain, bila antibodi ini terdeteksi di dalam tubuh seseorang, artinya tubuh orang tersebut pernah terpapar atau dimasuki oleh virus Corona. Namun perlu Anda ketahui, pembentukan antibodi ini memerlukan waktu, bahkan bisa sampai beberapa minggu.</p>
+                            <a href="https://www.alodokter.com/kenali-apa-itu-rapid-test-untuk-virus-corona" target="_blank">
+                                <div class="informasi-tombol">
+                                    Baca selanjutnya >
+                                </div>
+                             </a>
+                        </div>
+                    </div>
+                    <div class="berita-terkini">
+                        <div class="informasi">
+                            <img src="./src/img/rumahsakitcovid.jpg" alt="">
+                        </div>
+                        <div class="informasikanan">
+                            <h1 id="color1">Rumah Sakit </h1>
+                            <h1 id="color1">Rekomendasi</h1>
+                            <h4 id="color2">Beberapa rumah sakit ini merupakan rekomendasi test Covid19</h4>
+                            <p>Bagi Anda yang khawatir terjangkit virus Corona atau memiliki risiko terpapar COVID-19, Anda dapat memeriksakan diri ke rumah sakit (RS) rujukan yang telah disiapkan pemerintah.</p>
+                            <p>Sejumlah pemerintah daerah juga menyiapkan nomor telepon layanan khusus bagi masyarakat yang ingin mendapatkan informasi, atau memberi laporan terkait wabah virus Corona.</p>
+                            <a href="https://news.detik.com/berita/d-4942353/daftar-rumah-sakit-rujukan-covid-19-seluruh-indonesia" target="_blank">
+                                <div class="informasi-tombol">
+                                    Baca selanjutnya >
+                                </div>
+                             </a>                      
+                        </div>
+                    </div>  
+                </div>
+            </article>
+            <div class="media-informasi">
+                <div class="hotline">
+                    <div class="pilihan-hotline">
+                        <div class="layanan-hotline" onclick="window.open('https://www.halodoc.com/cari-dokter','_blank')">
+                            <span><img src="./src/icon/stethoscope.svg" alt=""></span>
+                            <p>Bertemu Dokter</p>
+                        </div>
+                        <div class="layanan-hotline" onclick="window.open('https://indonesia.go.id/layanan/kesehatan','_blank')">
+                            <span><img src="./src/icon/social-media.svg" alt=""></span>
+                            <p>Layanan kesehatan</p>
+                        </div>
+                    </div>
+                    <div class="emergency-call">
+                        <div class="emergency-info">
+                            <div class="emergency-text">
+                                <p>Emergency Call</p>
+                                <h2>(+0361) 87998909</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-cegah" id="halamanpencegahan">
+               <div class="title-cegah">
+                    <p id="color2">Pencegahan</p>
+                    <h1>Cara Melindungi Diri dari Covid19</h1>
+               </div> 
+                <div class="container-cegah">
+                    <div class="bolehtidakboleh">
+                        <div class="judul-bolehtidakboleh do">
+                            <h2>Hal yang harus dilakukan</h2>
+                        </div>
+                        <div class="konten-bolehtidakboleh">
+                            <div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/cucitangan-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Cuci tangan dengan baik</h3>
+                                    <p>Cuci tangan sesering mungkin dan sesuai arahan WHO</p>
+                                </div>
+                                
+                            </div>
+                            <div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/masker-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Ingat selalu gunakan masker</h3>
+                                    <p>Gunakan masker saat beraktivitas di luar ruangan</p>
+                                </div>
+                                
+                            </div><div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/buah-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Mengkonsumsi makanan bergizi</h3>
+                                    <p>Selalu mencukupi konsumsi makanan bergizi untuk daya tahan</p>
+                                </div>
+                                
+                            </div><div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/disentifektan-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Bersihkan benda disekitarmu</h3>
+                                    <p>Rajin membersihkan benda yang sering disentuh dengan disenfektan</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="bolehtidakboleh">
+                        <div class="judul-bolehtidakboleh dont">
+                            <h2>Hal yang tidak boleh dilakukan</h2>
+                        </div>
+                        <div class="konten-bolehtidakboleh">
+                            <div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/berkumpul-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Hindari berkumpul</h3>
+                                    <p>Hindari diam di tempat umum dan berkumpul dengan orang-orang</p>
+                                </div>
+                                
+                            </div>
+                            <div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                       <img src="./src/logo/jabat tangan-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Hindari kontak fisik</h3>
+                                    <p>Hindari berjabat tangan dan kotak fisik dengan orang lain</p>
+                                </div>
+                                
+                            </div>
+                            <div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/muka-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Hindari menyentuh wajah</h3>
+                                    <p>Jangan menyentuh wajah, khususnya mata, hidung dan bibir</p>
+                                </div>
+                                
+                            </div>
+                            <div class="info-konten">
+                                <div class="logo-infokonten">
+                                    <div class="lg-infokonten">
+                                        <img src="./src/logo/bepergian-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="tips-infokonten">
+                                    <h3>Hindari berpergian</h3>
+                                    <p>Jangan bepergian dan tetap di rumah untuk mencegah penularan</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>   
+            </div>
+
+
+            <div class="info-dokter" id="halamandokter">
+                <div class="title-dokter">
+                    <p id="color2">Dokter</p>
+                    <h1 id="color1">Konsultasi dengan Dokter Spesialis</h1>
+                </div>
+                <div class="dokter-spesialis">
+                    <div class="dokter">
+                        <div class="para-dokter">
+                            <div class="foto-dokter">
+                                <img src="./src/img/dokter 1.jpg" alt="">
+                            </div>
+                            <div class="keterangan-dokter">
+                                <h3>Dr. Rai Surya</h3>
+                                <p>Spesialis Paru-paru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dokter">
+                        <div class="para-dokter">
+                            <div class="foto-dokter">
+                                <img src="./src/img/dokter 2 (2).jpg" alt="">
+                            </div>
+                            <div class="keterangan-dokter">
+                                <h3>Dr. Sinta Dewi</h3>
+                                <p>Spesialis Virologi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dokter">
+                        <div class="para-dokter">
+                            <div class="foto-dokter">
+                                <img src="./src/img/dokter 3.jpg" alt="">
+                            </div>
+                            <div class="keterangan-dokter">
+                                <h3>Dr. Anjani Putri</h3>
+                                <p>Spesialis Penyakit Dalam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="ciri-ciri" id="halamanciri-ciri">
+                <div class="container-ciri">
+                    <div class=judulatas-ciri">
+                        <p style = "margin:0" id="color2">Ciri-ciri</p>
+                        <h1 style = "margin:0" id="color1">Ciri-ciri Corona Virus (covid-19)</h1>
+                    </div> 
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Et, hic totam rerum dolor modi cupiditate laudantium corrupti ratione architecto quae impedit harum asperiores laboriosam fuga possimus commodi veritatis aspernatur velit?</p>
+                    </div>
+                    <div class="utama-ciri">
+                        <div class="sebelah-ciri">
+                            <div class="cirinya">
+                                <div class="inti-ciri">                                    
+                                    <img src="./src/icon/check.svg" alt="">
+                                    <h4 id="color1">Batuk</h4>
+                                </div>
+                                <div class="inti-ciri">                                    
+                                    <img src="./src/icon/check.svg" alt="">
+                                    <h4 id="color1">Bersin</h4>
+                                </div><div class="inti-ciri">                                    
+                                    <img src="./src/icon/check.svg" alt="">
+                                    <h4 id="color1">Demam</h4>
+                                </div>
+                            </div>
+                            <div class="cirinya">
+                                <div class="inti-ciri">                                    
+                                    <img src="./src/icon/check.svg" alt="">
+                                    <h4 id="color1">Sakit Kepala</h4>
+                                </div>
+                                <div class="inti-ciri">                                    
+                                    <img src="./src/icon/check.svg" alt="">
+                                    <h4 id="color1">Nyeri Otot</h4>
+                                </div>
+                                <div class="inti-ciri">                                    
+                                    <img src="./src/icon/check.svg" alt="">
+                                    <h4 id="color1">Sesak Nafas</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+
+            </div>
+
+
+            <div class="konten" id="halamanblog">
+                <div class="konten-title">
+                    <p id="color2">Blog</p>
+                    <h1 id="color1">Berita Terkini</h1>
+                </div>
+                <div class="konten-isi">
+                    <div class="konten-berita">
+                        <div class="container-berita">
+                            <div class="gambar-berita">
+                                <img src="./src/img/presiden.jpeg" alt="">
+                            </div>
+                            <div class="keterangan-berita">
+                                <p>COVID-19</p>
+                                <h2>Presiden: Dukung Penuh Riset dan Inovasi Terkait Penanganan Covid-19</h2>
+                                <span> <a href="https://covid19.go.id/p/berita/presiden-dukung-penuh-riset-dan-inovasi-terkait-penanganan-covid-19" target="_blank">Baca Selengkapnya</a>  ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="konten-berita">
+                        <div class="container-berita">
+                            <div class="gambar-berita">
+                                <img src="./src/img/sejahteralawancovid.jpeg" alt="">
+                            </div>
+                            <div class="keterangan-berita">
+                                <p>COVID-19</p>
+                                <h2>Sejahtera Secara Psikologis Modal Utama Lawan Corona</h2>
+                                <span> <a href="https://covid19.go.id/p/berita/sejahtera-secara-psikologis-modal-utama-lawan-corona" target="_blank">Baca Selengkapnya</a>  ></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="konten-berita">
+                        <div class="container-berita">
+                            <div class="gambar-berita">
+                                <img src="./src/img/menhub.jpeg" alt="">
+                            </div>
+                            <div class="keterangan-berita">
+                                <p>COVID-19</p>
+                                <h2>Kemenhub Telah Terbitkan Se Dirjen Tentang Petunjuk Operasional Transportasi Untuk Tindaklanjuti Se Gugus Tugas</h2>
+                                <span> <a href="https://covid19.go.id/p/berita/kemenhub-telah-terbitkan-se-dirjen-tentang-petunjuk-operasional-transportasi-untuk-tindaklanjuti-se-gugus-tugas" target="_blank">Baca Selengkapnya</a>  ></span>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+
+        </div>
+
+       
+
+
+        <!-- Disini Tempat Aside -->
+        <aside>
+            <div class="aside-container">
+                <div>
+                    <img src="./src/img/profile.png" alt="">
+                </div>
+                <div>
+                    <h4>I Ketut Agus Juliana</h4>
+                    <p>Junior Programmer</p>
+                </div>
+                <div class="skil">
+                    <h4>Skils</h4>
+                    <div class="skill-ket">
+                    <p>Programmer</p>
+                    <p>UI/UX</p>
+                    <p>Grapic Designer</p>
+                    <p>Video Editor</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer id="halamantentang">
+        <!-- Disini Tempat Footer -->
+
+        <div>
+            <div class="top-footer">
+                <div class="konten-top">
+                    <h1>Update Berita Terkini</h1>
+                </div>
+                <div class="konten-top">
+                    <input class="form-konten" placeholder="Ketik E-Mailmu Disini....">
+                        <span class="send-bottom">Subscribe</span>
+                    </input>
+                </div>
+            </div>
+            <hr>
+            <div class="midle-footer">
+                <div class="midle-kontenlogo">
+                    <img src="./src/logo/corona logo white-01 crop.png" alt="">
+                        <div class="logo-footer">
+                            <div class="social-media">
+                                <div class="link-social" onclick="window.open('https://www.facebook.com/InfoBencanaBNPB/','_blank')">
+                                    <img onmouseover="besarGambar(this)" onmouseout="kecilGambar(this)" src="./src/logo/facebook-01.png" alt="">
+                                </div>
+                                <div class="link-social" onclick="window.open('https://www.instagram.com/bnpb_indonesia/','_blank')">
+                                    <img onmouseover="besarGambar(this)" onmouseout="kecilGambar(this)" src="./src/logo/ig-01.png" alt="">
+                                </div>
+                                <div class="link-social" onclick="window.open('https://wa.me/6281133399000','_blank')">
+                                    <img onmouseover="besarGambar(this)" onmouseout="kecilGambar(this)" src="./src/logo/wa-01.png" alt="">
+                                </div>
+                                <div class="link-social" onclick="window.open('https://www.youtube.com/user/BNPBIndonesia/','_blank')">
+                                    <img onmouseover="besarGambar(this)" onmouseout="kecilGambar(this)" src="./src/logo/yt-01.png" alt="">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                <div class="midle-konten">
+                    <div class="title-footer">
+                        <h2>Shortcut</h2>
+                    </div>
+                    <span class="garis-footer"></span>
+                    <div class="isi-footer">
+                        <p onclick="berandascroll()"><a>Beranda</a></p>
+                        <p onclick="statistikascroll()"><a>Statistik</a></p>
+                        <p onclick="covidscroll()"><a>Covid-19</a></p>
+                        <p onclick="pencegahanscroll()"><a>Pencegahan</a></p>
+                        <p onclick="dokterscroll()"><a>Dokter</a></p>
+                        <p onclick="ciriciriscroll()"><a>Ciri-ciri</a></p>
+                        <p onclick="blogscroll()"><a>Blog</a></p>
+                    </div>
+                </div>
+                <div class="midle-konten">
+                    <div class="title-footer">
+                        <h2>Tentang</h2>
+                    </div>
+                    <div class="isi-footer">
+                    <span class="garis-footer"></span>
+                        <p>Website ini merupakan website
+                            sebagai pusat informasi Pandemi
+                            Covid-19.<p>
+                        <p>Pentingnya informasi yang bisa
+                            diakses oleh masyarakat merupakan
+                            tujuan lain dari website ini
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="midle-konten">
+                    <div class="title-footer">
+                        <h2>Terimakasih kepada</h2>
+                    </div>
+                    <span class="garis-footer"></span>
+                    <div class="isi-footer">
+                        <p>Freepik</p>
+                        <p>Unsplash</p>
+                        <p>W3School</p>
+                        <p>Dicoding</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div>
+                    <p>Copyright &copy 2020</p>
+                </div>
+                <div>
+                    <p>Privacy | Terms & Conditions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,926 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 3em;
+}
+
+#color1{
+    color: #130947;
+}
+
+#color2{
+    color: #007bff;
+}
+
+html{
+    background-color: rgb(227, 231, 238);
+}
+
+body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul{
+    margin: 0;
+    display: flex;
+}
+
+
+header {
+    background-image: url("./img/cover1.jpg");
+    background-repeat: none;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.navbar ul li {
+    display: flex;
+    text-decoration: none;
+    margin-right: 50px;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.burgermenu {
+    width: 40px;
+    display: none;
+}
+
+.burgermenu img {
+    width: 100%;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-isi{
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+
+}
+
+.dropdown-burger{
+    
+    display: none;
+}
+
+.dropdown-isi li a{
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    
+}
+
+.dropdown:hover .dropdown-isi {
+    opacity: 100%;
+    transition: 0.2s;
+}
+
+
+.data ul li{
+    text-decoration: none;
+    margin: auto 60px;
+    list-style-type: none;
+    float: left; 
+}
+
+li span{
+  font-size: 34px;
+}
+
+li a{
+    text-decoration: none;
+    color: white; 
+    
+}
+
+.navbar{
+    font-size: 16px;
+    padding-top: 20px; 
+    margin-right: 70px;
+}
+ 
+header{
+    background-color: teal;
+}
+
+
+nav{
+    display: flex;
+    position: fixed; 
+    z-index: 10;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 0;
+}
+
+#content{
+    width: 75%;    
+    margin-left: 70px;
+    margin-right: 20px;
+}
+
+aside {
+    margin-top: 30px;
+    width: 25%;
+    height: 480px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 5px;
+    padding : 20px 0px;
+    border-radius: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;    
+}
+
+aside img{
+    padding-top: 30px;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.header-logo img{
+    margin: 0 70px;
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-text {
+    margin: 0;
+    color: white;
+    margin-top: 200px;
+    margin-left: 50%;
+}
+
+.header-text h4 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+.header-text p {
+    font-size: 18px;
+}
+
+.ket-header {    
+    padding-right : 100px;
+}
+
+.head-button {
+    background-color: dodgerblue;
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+}
+
+.head-button span {
+    width: 10%;
+    height: auto;
+    fill: white;
+    margin-right: 15px;
+}
+
+.head-button span img {
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.head-button {
+    margin-bottom: 20px;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.tempat{
+    background-color: rgba(0,0,0,0.4);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-konten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+
+.modal {
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.close {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+  }
+
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+.statistik-covid{
+    padding: 50px 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.title-sta{
+    text-align: center;
+    margin : 50px 0;
+}
+
+.title-sta p {
+    color: #130947;
+}
+
+.title-sta p, .title-sta h1 {
+    margin: 0;
+}
+
+.jenis-container h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+#red{
+    color: #DE3618;
+}
+
+#yellow{
+    color: #EEC200;
+}
+
+#green{
+    color: #50B83C;
+}
+
+.jenis-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap : wrap;
+}
+
+.jenis-container p {
+    margin: 0;
+}
+
+.jenis-container img {
+    width: 50px;
+    height: auto;
+}
+
+.status-container {
+    display: flex;
+    flex : wrap;
+    margin-right: 40px;    
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+.logo-status{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+
+.peta-covid {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 20px;
+    
+
+}
+
+article {
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 50px 20px;
+}
+
+.peta-covid img {
+    width: 100%;
+}
+
+.berita-terkini{
+    display: flex;
+    margin-bottom: 70px;
+    height: 100%;
+}
+
+.informasi{
+    width: 50%;
+}
+
+.informasikanan{
+    margin-left: 20px;
+    width: 50%;
+}
+
+.informasi h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+.informasikanan h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+.informasi img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    height:100%;
+}
+
+.informasikanan img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    height:100%;
+}
+
+.informasi-tombol {
+    background-color: dodgerblue;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.media-informasi{
+    display: flex;
+    text-align: center;
+    margin: 100px 0;
+    justify-content: center;
+}
+
+.hotline{
+    width: 90%;
+    background: linear-gradient(110deg, dodgerblue 60%, #130947 60%);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.pilihan-hotline{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.layanan-hotline {
+    background-color: #130947;
+    color: white;
+    display: inline-block;
+    border-radius: 10px;
+    line-height: 5px;
+    padding: 0px 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+
+.layanan-hotline span img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.layanan-hotline p {
+    font-weight: bold;
+}
+
+.emergency-call{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.emergency-info {
+    margin-left: 90px;
+}
+
+.emergency-text p, .emergency-text h2 {
+    margin: 0;
+}
+
+.info-cegah {
+    background-color: #130947;
+    padding: 40px;  
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.title-cegah {
+    padding-top : 70px;
+}
+
+.judulini{
+    text-align: center;
+    margin: 70px 0;
+}
+
+.judulini p, .judulini h1{
+    margin: 0;
+   
+}
+
+.judulini h1{
+    font-size: 2em;
+}
+
+.title-cegah p, .title-cegah h1{
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.container-cegah{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.bolehtidakboleh{
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.judul-bolehtidakboleh h2{
+    color: white;
+    margin: 0;
+}
+
+.judul-bolehtidakboleh {
+    text-align: center;
+}
+
+.do h2{
+    background-color: dodgerblue;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.dont h2{
+    background-color : #c35362;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.info-konten {
+    text-align: left;
+    padding: 20px 0;
+    border-right: 1px solid #1c5088;
+    border-left: 1px solid #1c5088;
+    border-bottom: 1px solid #1c5088;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.lg-infokonten img{
+    width: 100%;
+   
+}
+
+.logo-infokonten{
+    width: 25%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tips-infokonten{
+    width: 75%;
+}
+
+.info-dokter{
+    padding:40px;
+    text-align: center;    
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.title-dokter {
+    margin: 50px 0;
+}
+
+.title-dokter p, .title-dokter h1 {
+    margin: 0;
+}
+
+.dokter-spesialis{
+    display: flex;   
+    flex-wrap: wrap; 
+    margin-top: 80px;  
+}
+
+.dokter{   
+    /* border: 1px solid turquoise;     */
+    margin: 20px 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.para-dokter{
+    width: 100%;
+    padding: 20px;
+}
+
+.foto-dokter {
+    width: 100%;
+}
+
+.foto-dokter img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.keterangan-dokter{
+    text-align: left;
+    margin-top: 20px;
+}
+
+.keterangan-dokter h3, .keterangan-dokter p {
+    margin: 0;
+}
+
+.ciri-ciri{
+    margin: 30px 0px;
+    display: flex;  
+    justify-content: flex-end;
+    background-image: url(./img/ciri-ciri.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.container-ciri{
+    width: 50%;
+    margin: 70px 0;
+}
+
+.judulatas-ciri p, .judulatas-ciri h1 {
+    margin: 0;
+}
+.sebelah-ciri {
+    display: flex;
+}
+
+.cirinya{
+    width: 50%;
+    
+}
+
+.inti-ciri {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+
+.inti-ciri:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.inti-ciri img {
+    width: 15%;
+    margin-right: 20px;
+}
+
+.utama-ciri {
+    margin-top: 50px;
+}
+
+.konten{
+    padding: 50px 0;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+}
+
+.konten-title{
+    padding-top:50px;
+    margin-bottom: 70px;
+}
+
+.konten-title p, .konten-title h1{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container-berita {
+    width: 30%;
+    padding: 20px;
+}
+
+.gambar-berita img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.keterangan-berita {
+    text-align: left;
+}
+
+.keterangan-berita p, .keterangan-berita h2 {
+   margin-bottom: 10px;
+}
+
+.keterangan-berita span {
+    border-bottom: 2px solid #130947;
+}
+
+.keterangan-berita span a {
+    text-decoration: none;
+    color: #130947;
+}
+
+.konten-isi {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.konten-berita {
+    width: 30%;
+}
+
+.container-berita{
+    width: 100%;
+}
+
+
+footer{
+    margin-top: 80px;
+    background-color: #130947;
+}
+
+hr {
+    width: 88%;
+   margin-bottom: 100px;
+}
+
+.top-footer h1{
+    color: white;
+    
+}
+
+.top-footer {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.konten-top {
+    align-items: center;
+    display: flex;
+}
+
+.form-konten {
+    background-color: white;
+    width: 700px;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+.konten-top h1 {
+    margin: 0;
+    margin-right: 100px;
+}
+
+
+
+.send-bottom {
+    background-color: dodgerblue;
+    height: 100%;
+    width: 30%;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.midle-footer {
+    display: flex;
+    color: white;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+}
+
+.midle-kontenlogo img{
+    width: 100%;
+}
+
+.midle-kontenlogo{
+    width: 25%;
+}
+
+.midle-konten {
+    width: 25%;
+    padding: 20px;
+}
+
+.logo-footer img {
+    width: 100%;
+}
+
+.title-footer h2{
+    margin: 0;
+}
+
+.garis-footer{
+    width: 50%;
+    height: 3px;
+    background-color: dodgerblue;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0  50% 50% 0;
+}
+
+.isi-footer p {
+    font-weight:normal;
+}
+
+.bottom-footer {
+    background-color: rgb(4, 30, 87);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+}
+
+.footer-keterangan p{
+    margin: 0;
+}
+
+.footer-keterangan {
+    padding-left: 20px;
+}
+
+.social-media{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link-social {
+    cursor: pointer;
+}
+
+.link-social img{
+    width: 30px;
+    margin-right: 20px;
+}
+
+.skil {
+    margin-top: 50px;
+   
+}
+
+.skill-ket{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.skil h4 {
+    margin-bottom: 0;
+}
+
+.skill-ket p {
+    padding: 10px;
+    border: 1px solid dodgerblue;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.skill-ket p:hover {
+    background-color: dodgerblue;
+    color: white;
+}

@@ -1,0 +1,477 @@
+@media screen  and (max-width: 1024px){
+    .status-container{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        margin: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .header-text{
+        margin-top: 150px;
+        margin-left: 40%;
+    }
+
+    aside{
+        height: 73vh;
+    }
+
+    .berita-terkini{
+        height: 100%;
+    }
+
+    .informasi h1{
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .informasikanan h1{
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .informasi p{
+        font-size: 15px;
+    }
+
+    .informasikanan p{
+        font-size: 15px;
+    }
+
+    .layanan-hotline p {
+        font-size: 12px;
+    }
+
+    .emergency-text{
+        text-align: center;
+        width: 100%;
+    }
+
+    .emergency-text h2{
+        font-size: 18px;
+    }
+
+    .emergency-text p{
+        font-size: 12px;
+    }
+
+
+
+    .emergency-info{
+        margin: auto;
+    }
+
+    .container-cegah{
+        display: block;
+    }
+
+    .bolehtidakboleh {
+        width: 100%;
+        margin: 0 0 50px 0;
+        
+    }
+
+    .konten-top h1 {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    .top-footer {
+        width: 100%;
+    }
+
+    .konten-top {
+        margin-right: 20px;
+    }
+
+    .form-konten {
+        width: 430px;
+    }
+
+}
+
+@media screen  and (max-width: 768px){
+
+    html {
+        width: 100%;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+    }
+
+
+    .konten-isi{
+        justify-content: space-around;
+    }
+
+    .konten-berita{
+        width: 40%;
+        
+    }
+
+    #content{
+        width: 100%;
+        margin: 0;
+        padding: 0 40px;
+    }
+
+    .header-text p{
+        padding: 0;
+    }
+
+    aside{
+        width: 90%;
+        margin: 30px auto;
+        height: auto;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .burgermenu {
+        display: block;
+        margin: auto 60px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .header-logo img {
+        margin: 0 40px;
+    }
+
+
+    .dropdown-burger{
+        position: absolute;
+        top: 93px;
+        background-color: white;
+        width: 90%;
+        margin: 0 40px;
+        display: none;
+       
+    }
+
+    .dropdown-burgeractive{
+        position: absolute;
+        top: 93px;
+        background-color: white;
+        width: 100%;
+        display: block;
+    }
+
+    .dropdown-burgeractive li {
+        list-style-type: none;
+        text-decoration: none;
+        transition:  all 2s linear;
+    }
+
+    .dokter {
+        width: 40%;
+    }
+
+    .dokter-spesialis {
+        justify-content: space-around;
+    }
+
+    .dropdown-burgeractive li {
+        margin: 25px;
+    }
+
+    .dropdown-burgeractive li a {
+        color: #130947;
+    }
+
+    .header-text {
+        padding: 150px 40px 0 40px;
+        margin: auto 60px;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .btn-container {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .head-button{
+        width: 200px;
+        padding: 15px 3px;
+    }
+
+    .head-button p{
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .para-dokter{
+        padding: 0;
+    }
+
+    .keterangan-dokter h3 {
+        font-size: 16px;
+    }
+
+    .keterangan-dokter p {
+        font-size: 14px;
+    }
+
+    .container-ciri{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.4);
+        height: 100%;
+        padding: 70px 40px;
+    }
+
+    .ciri-ciri {
+        padding: 0;
+    }
+
+    .top-footer{
+        display: block;
+        padding: 50px;
+    }
+
+    .konten-top {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 30px;
+       
+    }
+
+    .send-bottom{
+        height: 50px;
+    }
+
+    .midle-footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .midle-konten{
+        width: 50%;
+    }
+
+    .midle-kontenlogo {
+        width: 50%;
+    }
+
+}
+
+
+@media screen  and (max-width: 425px){
+    .burgermenu{
+        margin: auto 20px auto 0;
+    }
+
+    article {
+        padding: 50px 10px;
+    }
+
+    .burgermenu img {
+        width: 30px;
+    }
+
+    .header-text {
+        padding: 150px 30px;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin: auto;
+    }
+
+    .head-button {
+        margin-bottom: 50px;
+    }
+
+    .header-text h1{
+        font-size: 32px;
+    }
+
+    .btn-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .head-button {
+        width: 100%;
+        padding: 15px 5px;
+        margin: 0;
+        margin: 0 10px 20px 10px;
+    }
+
+    .head-button span img {
+        width: 70%;
+    }
+
+    .head-button p {
+        font-size: 16px;
+    }
+
+    #content {
+        padding: 0 20px;
+    }
+
+    .statistik-covid {
+        margin: 20px 0;
+    }
+
+    .status-container {
+        width: 100%;
+    }
+
+    .judulini {
+        margin: 20px 0;
+    }
+
+    .konten-berita-terkini{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .berita-terkini{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .informasi {
+        margin: 0;
+        width: 100%;
+    }
+
+    .informasi img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .informasikanan {
+        margin: 0;
+        width: 100%;
+    }
+
+    .info-cegah {
+        padding: 5px 10px;
+    }
+
+    .hotline{
+        background: dodgerblue;
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    .pilihan-hotline {
+        width: 100%;
+    }
+
+    .layanan-hotline {
+        width: 80%;
+        margin: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+        padding: 20px 0; 
+    }
+
+    .dokter{
+        width: 100%;
+    }
+
+    .emergency-call {
+        padding: 15px 0; 
+        width: 80%;
+        background-color: #130947;
+        border-radius: 8px;
+        margin: auto;
+    }
+
+    .infokonten{
+        display: flex;
+        justify-content: center;
+    }
+
+    .konten-berita {
+        width: 100%;
+    }
+
+    .tips-infokonten{
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-infokonten {
+        width: 100px;
+        margin: auto;
+    }
+
+    .dokter{
+        margin-bottom: 50px;
+    }
+
+    .keterangan-dokter {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .info-dokter {
+        padding: 0;
+    }
+
+    .konten-title {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .title-dokter{
+        padding-top: 80px;
+    }
+
+    .container-ciri {
+        padding: 70px 10px;
+    }
+
+
+    .form-konten {
+        height: 40px;
+        padding: 10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .send-bottom {
+        height: 40px;
+        width: 50%;
+        padding: 10px 20px;
+        font-size: 12px;
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    .konten-top{
+       display: flex;
+       flex-wrap: wrap; 
+    }
+
+    .midle-konten{
+        width: 100%;
+    }
+
+    .midle-kontenlogo{
+        width: 100%;
+    }
+
+    .social-media {
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .container-berita {
+        padding: 20px 10px;
+    }
+
+    .bottom-footer {
+        padding: 0 40px;
+    }
+}
